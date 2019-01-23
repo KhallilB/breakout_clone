@@ -15,30 +15,11 @@
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="480" height="320"></canvas>
+    <canvas id="myCanvas" width="480" height="320">
+      Sorry your browser doesnt support canvas :( <br />
+      Try Another browser or update your current browser
+    </canvas>
 
-    <script>
-      const canvas = document.getElementById("myCanvas");
-      const myCanvas = canvas.getContext("2d");
-
-      //GAme Box
-      myCanvas.beginPath();
-      myCanvas.rect(20, 40, 50, 50);
-      myCanvas.fillStyle = "#FF0000";
-      myCanvas.fill();
-      myCanvas.closePath();
-
-      myCanvas.beginPath();
-      myCanvas.arc(240, 160, 20, 0, Math.PI * 2, false);
-      myCanvas.fillStyle = "green";
-      myCanvas.fill();
-      myCanvas.closePath();
-
-      myCanvas.beginPath();
-      myCanvas.rect(160, 10, 100, 40);
-      myCanvas.strokeStyle = "rgba(0, 0, 255, 0.5)";
-      myCanvas.stroke();
-      myCanvas.closePath();
-    </script>
+    <script src="breakout-script.js"></script>
   </body>
 </html>

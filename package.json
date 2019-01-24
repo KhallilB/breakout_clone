@@ -1,0 +1,22 @@
+{
+  "name": "breakout-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "breakout-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhallilB/breakout_clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhallilB/breakout_clone/issues"
+  },
+  "homepage": "https://github.com/KhallilB/breakout_clone#readme",
+  "dependencies": {
+    "eslint": "^5.12.1"
+  }
+}

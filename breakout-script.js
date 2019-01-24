@@ -1,4 +1,4 @@
-var canvas = document.getElementById("myCanvas");
+var canvas = document.getElementById("myCanvas"); //referance to canvas element
 var ctx = canvas.getContext("2d");
 var ballRadius = 10;
 var x = canvas.width / 2;
@@ -17,6 +17,9 @@ var brickHeight = 20;
 var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
+var myRed = Math.floor(Math.random() * 256);
+var myGreen = Math.floor(Math.random() * 256);
+var myBlue = Math.floor(Math.random() * 256);
 var score = 0;
 
 var bricks = [];
@@ -70,7 +73,7 @@ function collisionDetection() {
           if (score == brickRowCount * brickColumnCount) {
             alert("YOU WIN, CONGRATS!");
             document.location.reload();
-            clearInterval(interval); // Needed for Chrome to end game
+            clearInterval(interval);
           }
         }
       }
@@ -102,7 +105,7 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "rgb(" + myRed + "," + myBlue + "," + myGreen + ")";
         ctx.fill();
         ctx.closePath();
       }
@@ -134,7 +137,7 @@ function draw() {
     } else {
       alert("GAME OVER");
       document.location.reload();
-      clearInterval(interval); // Needed for Chrome to end game
+      clearInterval(interval);
     }
   }
 
@@ -148,4 +151,4 @@ function draw() {
   y += dy;
 }
 
-var interval = setInterval(draw, 10);
+var interval = setInterval(draw, 10); //Used for chrome to end the game
